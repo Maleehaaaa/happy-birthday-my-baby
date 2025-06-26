@@ -219,36 +219,38 @@
         <button id="prevPage">Previous</button>
         <button id="nextPage">Next</button>
     </div>
-    
+
 </div>
 
 <script>
-    const pages = document.querySelectorAll('.page');
-    const prevBtn = document.getElementById('prevPage');
-    const nextBtn = document.getElementById('nextPage');
-    let currentPage = 0;
+  const pages = document.querySelectorAll(".page");
+  const nextBtn = document.getElementById("nextPage");
+  const prevBtn = document.getElementById("prevPage");
 
-    function showPage(index) {
-        pages.forEach((page, i) => {
-            page.style.display = i === index ? 'block' : 'none';
-        });
-    }
+  let currentPage = 0;
 
-    prevBtn.addEventListener('click', () => {
-        if (currentPage > 0) {
-            currentPage--;
-            showPage(currentPage);
-        }
-    });
+  function showPage(index) {
+    pages.forEach((page, i) => {
+      page.style.display = i === index ? "block" : "none";
+    });
+  }
 
-    nextBtn.addEventListener('click', () => {
-        if (currentPage < pages.length - 1) {
-            currentPage++;
-            showPage(currentPage);
-        }
-    });
+  nextBtn.addEventListener("click", () => {
+    if (currentPage < pages.length - 1) {
+      currentPage++;
+      showPage(currentPage);
+    }
+  });
 
-    showPage(currentPage); // Show first page by default
+  prevBtn.addEventListener("click", () => {
+    if (currentPage > 0) {
+      currentPage--;
+      showPage(currentPage);
+    }
+  });
+
+  // Show first page on load
+  showPage(currentPage);
 </script>
 
 <style>
