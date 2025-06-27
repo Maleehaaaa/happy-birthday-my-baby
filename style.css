@@ -13,7 +13,7 @@
     --color-text-pink: #FF7882;
     --color-heart: #78cbff;
     --color-bg-letter: #e4faff;
-    --color-border: #DACCBF;
+    --color-border: #bfd3da;
 }
 html{
     height: 100%;
@@ -1024,45 +1024,53 @@ body {
     z-index: 10000000000000000;
 }
 
-/* === Added for background, scrolling and mobile fix === */
-
+/* BODY BACKGROUND */
 body {
-  background: url('himym.png.jpeg') no-repeat center center fixed;
-  background-size: cover;
+  margin: 0;
+  padding: 0;
   overflow-x: hidden;
+  background-image: url('himym.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
-.card2-content {
-  max-height: 80vh;
+/* MAIN CONTAINER THAT NEEDS TO SCROLL */
+.boxMail-container {
+  max-height: 100vh;
   overflow-y: auto;
-  overflow-x: auto;
-  padding: 1rem;
-  margin-bottom: 1rem;
+  padding: 2rem;
+  box-sizing: border-box;
 }
 
+/* EACH PAGE CONTENT BOX */
 .page {
+  display: none;
+  font-size: 1rem;
+  padding: 1rem;
+  box-sizing: border-box;
+  width: 100%;
   word-wrap: break-word;
-  white-space: normal;
-  overflow-x: auto;
 }
 
+/* PAGINATION BUTTONS STICKY ON BOTTOM */
 .pagination-buttons {
   position: sticky;
-  bottom: 10px;
-  background: rgba(255, 255, 255, 0.8);
-  padding: 10px;
-  border-radius: 10px;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 1rem;
   text-align: center;
-  z-index: 10;
+  z-index: 1000;
 }
 
-@media screen and (max-width: 768px) {
-  .card2-content {
-    max-height: 70vh;
-    padding: 1rem;
-  }
-
-  .page {
-    font-size: 0.95rem;
-  }
+/* CLOSE BUTTON (x mark) */
+.boxMail .fa-xmark {
+  position: fixed;
+  top: 10px;
+  right: 15px;
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
+  z-index: 100000;
 }
