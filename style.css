@@ -1023,3 +1023,46 @@ body {
     color: white;
     z-index: 10000000000000000;
 }
+
+/* === Added for background, scrolling and mobile fix === */
+
+body {
+  background: url('himym.png.jpeg') no-repeat center center fixed;
+  background-size: cover;
+  overflow-x: hidden;
+}
+
+.card2-content {
+  max-height: 80vh;
+  overflow-y: auto;
+  overflow-x: auto;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.page {
+  word-wrap: break-word;
+  white-space: normal;
+  overflow-x: auto;
+}
+
+.pagination-buttons {
+  position: sticky;
+  bottom: 10px;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  z-index: 10;
+}
+
+@media screen and (max-width: 768px) {
+  .card2-content {
+    max-height: 70vh;
+    padding: 1rem;
+  }
+
+  .page {
+    font-size: 0.95rem;
+  }
+}
