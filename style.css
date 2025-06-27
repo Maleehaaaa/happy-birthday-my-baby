@@ -1074,3 +1074,13 @@ body {
   color: white;
   z-index: 100000;
 }
+
+/* ===== ChatGPT Fix: Ensure letter text is visible ===== */
+.boxMail .boxMail-container .card2 .card2-content{
+    color: #000 !important;        /* Force black text */
+}
+
+.boxMail .boxMail-container .card2 .card2-content .page{
+    display: block !important;     /* Make every page visible */
+}
+/* ======================================================= */
