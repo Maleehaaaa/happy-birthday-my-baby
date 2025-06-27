@@ -1083,4 +1083,10 @@ body {
 .boxMail .boxMail-container .card2 .card2-content .page{
     display: block !important;     /* Make every page visible */
 }
+
+.page p {
+  color: black !important;
+  position: relative;
+  z-index: 10;
+}
 /* ======================================================= */
