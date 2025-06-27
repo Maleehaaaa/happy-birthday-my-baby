@@ -8,9 +8,14 @@
   <link rel="stylesheet" href="style.css">
 
 <style>
-.card2-content{max-height:70vh;overflow-y:auto;-webkit-overflow-scrolling:touch;}
-@media (max-width:600px){
-  .card2-content{max-height:60vh;}
+/* ---- Fix to make letter text visible ---- */
+.card2-content, .card2-content p, .card2-content h3,
+.text__letter, .title__letter{
+  color:#000 !important;
+}
+
+.page{
+  display:block !important;
 }
 </style>
 </head>
