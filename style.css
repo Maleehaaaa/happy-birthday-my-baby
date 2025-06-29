@@ -1124,3 +1124,8 @@ body {
     text-align: center;
     z-index: 1000;
 }
+.card2-content {
+  max-height: 400px; /* adjust as needed */
+  overflow-y: auto;
+  padding: 20px;
+}
