@@ -1084,9 +1084,43 @@ body {
     display: block !important;     /* Make every page visible */
 }
 
-.page p {
-  color: black !important;
+.card2-content {
+  max-height: 80vh;
+  overflow-y: auto;
+  padding: 20px;
+  color: white;
   position: relative;
   z-index: 10;
 }
+
+.page {
+  display: block !important;
+  overflow-wrap: break-word;
+  padding: 10px;
+  color: white !important;
+  z-index: 20;
+}
 /* ======================================================= */
+
+/* Fix for scrollable card2-content on mobile */
+.card2-content {
+    max-height: 70vh;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+/* Make pages block by default when shown via JS */
+.page {
+    display: none;
+    padding: 10px;
+}
+
+/* Ensure buttons are always visible */
+.pagination-buttons {
+    position: sticky;
+    bottom: 0;
+    background-color: rgba(255,255,255,0.8);
+    padding: 10px;
+    text-align: center;
+    z-index: 1000;
+}
