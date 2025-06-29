@@ -203,15 +203,6 @@
 <div class="page" id="page17">
 <p>Again happy birthday i wish i could give yoy more because you deserve everything in this dunya as well as akhirat and i love your stories , your silly stuff you used to like Which I DO NOT FIND silly it's just you look so excited while saying it, it makes me laugh how adorable you look and when you tell me prophet stories like my nani it makes me giggle as well😭👋anyways ik you're not proud of yourself itna par i wish you knew you're admirable and ill lways be proud of you and how far youve come and ik youll do more and i love you even when you think youre unloveable you're perfect and don't take stress alot you're 19 you're not supposed to figure out everything and right now i know you have doubts but trust me you're going the right path even the fact yk you want to do is a huge chiz and you're perfect idk how to tell you or idk how to find words par tum ab perfect ho and there's nothing you should change okay? So don't stress alot my love meri jaan my kid and be youll always my baby ily and happy 19th birthday mere jawad</p>
 </div>
-<div class="card2-content multipage">
-  <div class="page" id="page1">
-    <p>Your text for page 1</p>
-  </div>
-  <div class="page" id="page2">
-    <p>Your text for page 2</p>
-  </div>
-  <!-- More pages -->
-</div>
 
 <!-- Add buttons here -->
 <div class="pagination-buttons">
@@ -261,11 +252,32 @@
 <div class="imageCute2">
 <img alt="" src="cute2.png"/>
 </div>
-</div>
-</div>
-</div>
-</div>
+<script>
+  const pages = document.querySelectorAll('.page');
+  let currentPage = 0;
 
+  function showPage(index) {
+    pages.forEach((page, i) => {
+      page.style.display = i === index ? 'block' : 'none';
+    });
+  }
+
+  showPage(currentPage); // Show the first page initially
+
+  document.getElementById('nextPage').addEventListener('click', () => {
+    if (currentPage < pages.length - 1) {
+      currentPage++;
+      showPage(currentPage);
+    }
+  });
+
+  document.getElementById('prevPage').addEventListener('click', () => {
+    if (currentPage > 0) {
+      currentPage--;
+      showPage(currentPage);
+    }
+  });
+</script>
 </body>
 <script>
     let datetxt = "4th july ";
@@ -367,5 +379,7 @@
     close.addEventListener('click', function () {
         boxmail.classList.remove('active')
     })
+
+</body>
 </script>
 </html>
