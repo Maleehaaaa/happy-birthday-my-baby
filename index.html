@@ -244,40 +244,6 @@
   // Show first page on load
   showPage(currentPage);
 </div>
-</script>
-<style>
-.page { display: none; font-size: 1rem; margin-bottom: 1rem; }
-.pagination-buttons { text-align: center; margin-top: 1rem; }
-</style>
-<div class="imageCute2">
-<img alt="" src="cute2.png"/>
-</div>
-<script>
-  const pages = document.querySelectorAll('.page');
-  let currentPage = 0;
-
-  function showPage(index) {
-    pages.forEach((page, i) => {
-      page.style.display = i === index ? 'block' : 'none';
-    });
-  }
-
-  showPage(currentPage); // Show the first page initially
-
-  document.getElementById('nextPage').addEventListener('click', () => {
-    if (currentPage < pages.length - 1) {
-      currentPage++;
-      showPage(currentPage);
-    }
-  });
-
-  document.getElementById('prevPage').addEventListener('click', () => {
-    if (currentPage > 0) {
-      currentPage--;
-      showPage(currentPage);
-    }
-  });
-</script>
 </body>
 <script>
     let datetxt = "4th july ";
@@ -380,6 +346,5 @@
         boxmail.classList.remove('active')
     })
 
-</body>
 </script>
 </html>
