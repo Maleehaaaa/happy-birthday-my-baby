@@ -1047,21 +1047,25 @@ body {
 /* EACH PAGE CONTENT BOX */
 .page {
   display: none;
-  font-size: 1rem;
+  font-size: 0.9rem;
   padding: 1rem;
   box-sizing: border-box;
   width: 100%;
   word-wrap: break-word;
 
-  margin-bottom: 1rem;
+  padding-bottom: 80px;
+
+  line-height: 1.4;
 }
 
 /* PAGINATION BUTTONS STICKY ON BOTTOM */
 .pagination-buttons {
-  position: static;        /* follow normal flow, appears below letter */
-  padding: 1rem 0;
+  position: sticky;
+  bottom: 0;
+  padding: 0.5rem 0;
   text-align: center;
-  margin-top: 2rem;        /* extra space from letter body */
+  background: none; /* transparent so text shows */
+  z-index: 1000;
 }
 
 /* CLOSE BUTTON (x mark) */
@@ -1083,7 +1087,10 @@ body {
 .boxMail .boxMail-container .card2 .card2-content .page{
     display: block !important;     /* Make every page visible */
 
-  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  padding-bottom: 80px;
+
+  line-height: 1.4;
 }
 
 .card2-content {
@@ -1102,7 +1109,10 @@ body {
   color: white !important;
   z-index: 20;
 
-  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  padding-bottom: 80px;
+
+  line-height: 1.4;
 }
 /* ======================================================= */
 
@@ -1118,15 +1128,20 @@ body {
     display: none;
     padding: 10px;
 
-  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  padding-bottom: 80px;
+
+  line-height: 1.4;
 }
 
 /* Ensure buttons are always visible */
 .pagination-buttons {
-  position: static;        /* follow normal flow, appears below letter */
-  padding: 1rem 0;
+  position: sticky;
+  bottom: 0;
+  padding: 0.5rem 0;
   text-align: center;
-  margin-top: 2rem;        /* extra space from letter body */
+  background: none; /* transparent so text shows */
+  z-index: 1000;
 }
 
 
@@ -1135,9 +1150,11 @@ body {
 /* Ensure each page is initially hidden, but can be shown with JS */
 .page {
   display: none;
-  font-size: 1.2rem;
+  font-size: 0.9rem;
   line-height: 1.6;
   margin-bottom: 1rem;
+
+  padding-bottom: 80px;
 }
 
 /* First page should be visible by default */
@@ -1157,17 +1174,22 @@ body {
 
 /* Buttons layout */
 .pagination-buttons {
-  position: static;        /* follow normal flow, appears below letter */
-  padding: 1rem 0;
+  position: sticky;
+  bottom: 0;
+  padding: 0.5rem 0;
   text-align: center;
-  margin-top: 2rem;        /* extra space from letter body */
+  background: none; /* transparent so text shows */
+  z-index: 1000;
 }
 
 .pagination-buttons button {
   padding: 8px 16px;
   font-family: 'Dancing Script', cursive;
+  background-color: #FF7882;
   border: none;
+  color: white;
   border-radius: 10px;
   cursor: pointer;
   margin: 0 10px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
 }
