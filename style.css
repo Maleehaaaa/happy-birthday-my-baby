@@ -1058,10 +1058,7 @@ body {
 .pagination-buttons {
   position: sticky;
   bottom: 0;
-  background: rgba(255, 255, 255, 0.7);
-  padding: 1rem;
-  text-align: center;
-  z-index: 1000;
+  background: none
 }
 
 /* CLOSE BUTTON (x mark) */
@@ -1117,10 +1114,7 @@ body {
 .pagination-buttons {
     position: sticky;
     bottom: 0;
-    background-color: rgba(255,255,255,0.8);
-    padding: 10px;
-    text-align: center;
-    z-index: 1000;
+    background-color: none
 }
 
 
