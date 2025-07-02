@@ -1152,3 +1152,10 @@ body {
 .pagination-buttons button {
   padding: none
 }
+.pagination-buttons {
+  position: static;
+  padding: 1rem 0;
+  text-align: center;
+  margin-top: 2rem;
+  /* background removed on purpose */
+}
