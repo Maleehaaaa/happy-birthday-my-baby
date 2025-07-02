@@ -1080,9 +1080,7 @@ body {
     color: #000 !important;        /* Force black text */
 }
 
-.boxMail .boxMail-container .card2 .card2-content .page{
-    display: block !important;     /* Make every page visible */
-}
+
 
 .card2-content {
   max-height: 80vh;
@@ -1094,7 +1092,7 @@ body {
 }
 
 .page {
-  display: block !important;
+  display: none;
   overflow-wrap: break-word;
   padding: 10px;
   color: white !important;
