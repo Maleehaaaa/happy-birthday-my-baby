@@ -209,34 +209,36 @@
 </div>
 </div>
 <script>
-  const pages = document.querySelectorAll(".page");
-  const nextBtn = document.getElementById("nextPage");
-  const prevBtn = document.getElementById("prevPage");
+  window.addEventListener("DOMContentLoaded", function () {
+    const pages = document.querySelectorAll(".page");
+    const nextBtn = document.getElementById("nextPage");
+    const prevBtn = document.getElementById("prevPage");
 
-  let currentPage = 0;
+    let currentPage = 0;
 
-  function showPage(index) {
-    pages.forEach((page, i) => {
-      page.style.display = i === index ? "block" : "none";
+    function showPage(index) {
+      pages.forEach((page, i) => {
+        page.style.display = i === index ? "block" : "none";
+      });
+    }
+
+    nextBtn.addEventListener("click", () => {
+      if (currentPage < pages.length - 1) {
+        currentPage++;
+        showPage(currentPage);
+      }
     });
-  }
 
-  nextBtn.addEventListener("click", () => {
-    if (currentPage < pages.length - 1) {
-      currentPage++;
-      showPage(currentPage);
-    }
+    prevBtn.addEventListener("click", () => {
+      if (currentPage > 0) {
+        currentPage--;
+        showPage(currentPage);
+      }
+    });
+
+    // Show first page on load
+    showPage(currentPage);
   });
-
-  prevBtn.addEventListener("click", () => {
-    if (currentPage > 0) {
-      currentPage--;
-      showPage(currentPage);
-    }
-  });
-
-  // Show first page on load
-  showPage(currentPage);
 </script>
 <style>
 .page { display: none; font-size: 1rem; margin-bottom: 1rem; }
